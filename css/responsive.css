@@ -1,0 +1,30 @@
+/* Pc */
+@media only screen and (max-width: 1023px) {
+    /* Sign in and Sign up */
+    .sign_form-main-btn{
+        flex-direction: column;
+        width: 400px;
+        height: 716px;
+        justify-content: space-between;
+    }
+    .sign_form-bg{
+        justify-content: center;
+        width: 400px;
+        height: 716px;
+    }
+    .sign_form-main-change{
+        top: 176px;
+        left: 0;
+    }
+    .sign_form-main-btn-box {
+        margin: 32px 0;
+    }
+}
+/* Tablet */
+@media only screen and (max-width: 739px){
+
+}
+/* Mobile */
+@media only screen and (min-width: 740px) and (max-width: 1023px){
+    
+}

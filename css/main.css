@@ -1,0 +1,522 @@
+/*--------------------------- Sign in and Sign up-------------------------------- */
+/*--------------------------- Sign in and Sign up-------------------------------- */
+/*--------------------------- Sign in and Sign up-------------------------------- */
+.sign_form{
+    background-color: var(--color-sign-change-1);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* sign background */
+.sign_form-bg{
+    height: 540px;
+    width: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/* background contain button */
+.sign_form-main-btn{
+    height: 453.6px;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sign_form-main-btn-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    transition: all 0.5s;
+}
+.sign_form-main-title{
+    font-weight: 500;
+    color: white;
+    margin: 16px 8px;
+    text-align: center;
+}
+.sign_form-main-btn-up{
+    color: black;
+    background-color: white;
+}
+.sign_form-main-btn-up:hover{
+    color: white;
+    background-color: var(--primary-color-sign-in);
+}
+.sign_form-main-btn-in {
+    color: black;
+    background-color: white;
+}
+.sign_form-main-btn-in:hover{
+    color: white;
+    background-color: var(--primary-color-sign-up);
+}
+/* background contain form */
+.sign_form-main{
+    background-color: white;
+    height: 540px;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.sign_form-main-change{
+    left: 50%;
+}
+/* Form sign in */
+.sign_form-in{
+    margin: 0 32px 0 32px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 540px;
+    width: 336px;
+    transition: 1s all;
+    transition-delay: 0.3s;
+}    
+.sign_form-in-change{
+    left: -100%
+}
+/* Form sign up */
+.sign_form-up{
+    margin: 0 32px 0 32px;
+    left: 200%;
+    top: 0;
+    position: absolute;
+    height: 540px;
+    width: 336px;
+    transition: 1s all;
+    transition-delay: 0.3s;
+}
+.sign_form-up-change{
+    left: 0;
+}
+/* Form */
+.sign_form-header{
+    color: var(--color-sign-change-1);
+    font-size: 48px;
+    font-weight: 600;
+    margin: 32px 0 0 0;
+}
+.sign_form-title{
+    font-size: 14px;
+    font-weight: 500;
+    width: 200px;
+    color: var(--text-color-sign);
+    margin: 0 0 24px 0;
+}
+.sign_form-header-title{
+    color: var(--color-sign-change-1);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+/* Input form */
+.sign_form-group{
+    display: flex;
+    flex-direction: column;
+}
+.input-box{
+    margin: 8px 0px 8px 0;
+    position: relative;
+}
+.sign_form-group input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    outline: none;
+    line-height: 16px;
+}
+.sign_form-group label{
+    font-size: 12px;
+}
+.sign_form-message{
+    margin-left: 8px;
+    color: red;
+    font-size: 12px;
+}
+
+/* Sign form outline */
+.sign_form-outline1{
+    position: absolute;
+    background-color: var(--color-sign-change-1);
+    height: 2px;
+    width: 0;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+.sign_form-outline2{
+    position: absolute;
+    background-color: var(--color-sign-change-1);
+    height: 0;
+    width: 2px;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+.sign_form-outline3{
+    position: absolute;
+    background-color: var(--color-sign-change-1);
+    height: 0;
+    width: 2px;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s;
+}
+.sign_form-outline4{
+    position: absolute;
+    background-color: var(--color-sign-change-1);
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.sign_form-group input:focus ~ .sign_form-outline1{
+    width: 100%;
+}
+.sign_form-group input:focus ~ .sign_form-outline2{
+    height: 100%;
+}
+.sign_form-group input:focus ~ .sign_form-outline3{
+    height: 100%;
+}
+.sign_form-group input:focus ~ .sign_form-outline4{
+    width: 100%;
+}
+/* sign form support */
+.sign_form-group-support{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0 8px 0;
+}
+.sign_form-forgetps{
+    color: var(--text-color-sign);
+}
+
+.sign_form-rememberps-box{
+    display: flex;
+    align-items: center;
+}
+
+.sign_form-rememberps-checkbox{
+    height: 14px;
+    width: 14px;
+    margin-right: 8px;
+    cursor: pointer;
+}   
+
+/* Sign form or */
+.sign_form-group-or{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign_form-group-or-line{
+    height: 1px;
+    flex: 1;
+    background-color: var(--border-color);
+}
+
+.sign_form-group-or-title{
+    margin: 0 8px;
+}
+
+/* Sign form other */
+.sign_form-group-other{
+    display: flex;
+    margin: 16px 0 8px;
+    justify-content: space-between;
+}
+
+.sign_form-group-other-item{
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    border: solid var(--border-color) 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 45%;
+    justify-content: center;
+}
+
+.sign_form-group-other-item:hover i{
+    color: var(--primary-color-sign-in);
+}
+
+.sign_form-group-other-item i{
+    color: var(--primary-color-sign-up);
+    margin-right: 8px;
+    font-size: 18px;
+    align-self: center;
+}
+
+/* sign form login and register btn */
+.sign_form-submit{
+    margin-top: 8px; 
+    background-color: var(--color-sign-change-1);
+    color: white;
+}
+.sign_form-submit:hover{
+    background-color: var(--color-sign-change-2);
+}
+
+
+/*---------------------------App-------------------------------- */
+/*---------------------------App-------------------------------- */
+/*---------------------------App-------------------------------- */
+.app{
+    background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);    
+}
+
+.header-content{
+    background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);    
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-bottom: 32px;
+    z-index: -1;
+}
+
+.header{
+    padding: 32px 32px 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 85.33px;
+}
+
+.header-icon-box{
+    background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+    padding: 16px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), -10px -10px 15px rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+}
+
+.header-icon{
+    font-size: 18px;
+    color: rgb(165, 162, 10);
+}
+
+.header-title{
+    font-size: 24px;
+    color: rgb(165, 162, 10);
+    font-weight: 600;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px 0 32px;
+    height: 545.67px;
+}
+
+.content-poster{
+    margin: 28px 0;
+    overflow: hidden;
+    width: 270px;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), -10px -10px 15px rgba(255, 255, 255, 0.3);
+}
+
+.content-poster img{
+    width: 480px;
+    height: 270px;
+    display: block;
+    background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+}
+
+.content-title{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 16px;
+    background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), -10px -10px 15px rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    margin-bottom: 32px;
+}
+
+.content-title-song{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-title-song-name{
+    font-size: 20px;
+    color: rgb(165, 162, 10);
+    font-weight: 500;
+}
+
+.content-title-song-singer{
+    font-size: 12px;
+}
+
+.content-title-icon{
+    font-size: 24px;
+}
+
+.content-handle{
+    width: 100%;
+}
+
+.content-handle-time-line{
+    padding: 0 8px;
+    background-color: white;
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.content-handle-time-line-current{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(165, 162, 10);
+    width: 200px;
+    height: 5px;
+}
+
+.content-handle-time{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.content-handle-timing{
+    font-size: 12px;
+}
+
+.content-handle-time-end{
+    font-size: 12px;
+}
+
+.content-handle-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), -10px -10px 15px rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    height: 48px;
+}
+
+.content-handle-main i{ 
+    color: black;
+    font-size: 14px;
+    display: block;
+}
+
+.content-handle-main-play{
+    height: 80px;
+    width: 80px;
+    background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), -10px -10px 15px rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-handle-main-play >i{
+    font-size: 48px;
+    color: rgb(165, 162, 10);
+}
+
+.footer{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 1000px;
+    margin-top: 663px;
+    z-index: 10;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    height: 100vh;
+}
+
+.footer-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    margin-top: 28px;
+}
+
+.footer-title-icon{
+    color: black;
+    font-size: 14px;
+}
+
+.footer-title-name{
+    font-weight: 500;
+    color: rgb(165, 162, 10);
+}
+
+.footer-list-song{
+    padding: 16px 32px;
+}
+
+.footer-list-song-item{
+    display: flex;
+    align-items: center;
+}
+
+.footer-list-song-poster{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.footer-list-song-poster img{
+    width: 150px;
+}
+
+.footer-list-song-title{
+    margin-left: 16px;
+    width: 200px;
+}
+
+.footer-list-song-icon{
+    padding: 16px;
+    font-size: 16px;
+}
+
+.footer-list-song-title-time{
+    color: black;
+}
+
+.footer-list-song-title-name{
+    color: rgb(165, 162, 10);
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-list-song-title-singer{
+    color: black;
+}

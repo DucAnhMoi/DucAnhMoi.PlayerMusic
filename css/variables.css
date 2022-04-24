@@ -1,0 +1,19 @@
+/* Variables */
+:root{
+    --primary-color-sign-in: #f43648;
+    --primary-color-sign-up: #03a9f4;
+    --text-color-sign: rgb(102, 102, 102);
+    --color-sign-change-1: #03a9f4;
+    --color-sign-change-2: #f43648;
+    --border-color: rgb(102, 102, 102);
+    --main-color-app: #2daaed;
+
+    --main-color-1: #120607;
+    --main-color-2: #fcab9a;
+    --main-color-3: #592722;
+    --main-color-4: #56354c;
+    --main-color-5: #ab4b3e;
+    --main-color-6: #d68770;
+    --main-color-7: #f3bdb9;
+    --main-color-8: #4420ba;
+};

@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    font-family: 'Poppins', monospace;
+}
+
+.btn{
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.webkit{
+    -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.opacity{
+    opacity: 0;
+}
+
+.none{
+    display: none !important;
+}
+
+.invalid{
+    background-color: pink !important;
+}
