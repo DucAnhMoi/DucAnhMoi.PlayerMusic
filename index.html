@@ -26,7 +26,7 @@
 
 <body>
     <!-- Sign in and Sign up -->
-    <div class="sign_form webkit none">
+    <div class="sign_form webkit">
         <div class="sign_form-bg">
             <!-- Sign btn -->
             <div class="sign_form-main-btn">
@@ -148,7 +148,7 @@
         </div>
     </div>
     <!-- App -->
-    <div class="app">
+    <div class="app none">
         <div class="header-content">
             <div class="header">
                 <div class="header-icon-box">
@@ -160,15 +160,20 @@
                 </div>
             </div>
             <div class="content">
-                <div class="content-poster">
-                    <img src="/img/mapmo.jpg" alt="">
-                </div>
-                <div class="content-title">
-                    <div class="content-title-song">
-                        <div class="content-title-song-name">Tên bài hát</div>
-                        <div class="content-title-song-singer">Tên ca sĩ</div>
+                <div class="content-song">
+                    <audio controls class="content-audio none">
+                        <source class="content-audio-source none" src="" type="audio/ogg">
+                    </audio>
+                    <div class="content-poster">
+                        <img class="content-poster-img" src="" alt="">
                     </div>
-                    <i class="content-title-icon fa-solid fa-heart"></i>
+                    <div class="content-title">
+                        <div class="content-title-song">
+                            <div class="content-title-song-name">Tên bài hát</div>
+                            <div class="content-title-song-singer">Tên ca sĩ</div>
+                        </div>
+                        <i class="content-title-icon fa-solid fa-heart"></i>
+                    </div>
                 </div>
                 <div class="content-handle">
                     <div class="content-handle-time-line">
@@ -182,8 +187,8 @@
                         <i class="fa-solid fa-rotate-left content-handle-main-rotato"></i>
                         <i class="fa-solid fa-backward content-handle-main-pre"></i>
                         <div class="content-handle-main-play">
-                            <i class="fa-solid fa-play"></i>
-                            <!-- <i class="fa-solid fa-pause none"></i> -->
+                            <i class="content-handle-main-play-i fa-solid fa-play"></i>
+                            <i class="content-handle-main-pause-i fa-solid fa-pause none"></i>
                         </div>
                         <i class="fa-solid fa-forward content-handle-main-next"></i>
                         <i class="fa-solid fa-shuffle content-handle-main-shuffle"></i>

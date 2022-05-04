@@ -279,7 +279,6 @@
 /*---------------------------App-------------------------------- */
 /*---------------------------App-------------------------------- */
 .app{
-    background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);    
 }
 
 .header-content{
@@ -290,6 +289,7 @@
     width: 100%;
     padding-bottom: 32px;
     z-index: -1;
+    height: 100vh;
 }
 
 .header{
@@ -298,7 +298,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 85.33px;
 }
 
 .header-icon-box{
@@ -325,7 +324,6 @@
     flex-direction: column;
     align-items: center;
     padding: 0 32px 0 32px;
-    height: 545.67px;
 }
 
 .content-poster{
@@ -355,6 +353,14 @@
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), -10px -10px 15px rgba(255, 255, 255, 0.3);
     border-radius: 16px;
     margin-bottom: 32px;
+    width: 1005;
+}
+
+.content-song{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content-title-song{
@@ -366,6 +372,9 @@
     font-size: 20px;
     color: rgb(165, 162, 10);
     font-weight: 500;
+    overflow: scroll;
+    white-space: nowrap;
+    width: 240px;
 }
 
 .content-title-song-singer{
@@ -374,6 +383,12 @@
 
 .content-title-icon{
     font-size: 24px;
+    color: white;
+    margin-left: 16px;
+}
+
+.content-title-icon.content-title-icon--active{
+    color: red;
 }
 
 .content-handle{
@@ -387,6 +402,7 @@
     border-radius: 5px;
     margin-bottom: 12px;
     position: relative;
+    overflow: hidden;
 }
 
 .content-handle-time-line-current{
@@ -394,7 +410,7 @@
     top: 0;
     left: 0;
     background-color: rgb(165, 162, 10);
-    width: 200px;
+    width: 0;
     height: 5px;
 }
 
@@ -425,7 +441,7 @@
 
 .content-handle-main i{ 
     color: black;
-    font-size: 14px;
+    font-size: 20px;
     display: block;
 }
 
@@ -446,13 +462,13 @@
 }
 
 .footer{
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 1000px;
-    margin-top: 663px;
+    margin-top: 672px;
     z-index: 10;
+    overflow: hidden;
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
-    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+
 }
 
 .footer-title{
@@ -461,26 +477,38 @@
     align-items: center;
     flex-direction: column;
     padding: 16px;
-    margin-top: 28px;
+    margin-top: 12px;
 }
 
 .footer-title-icon{
     color: black;
     font-size: 14px;
+    color: white;
 }
 
 .footer-title-name{
     font-weight: 500;
     color: rgb(165, 162, 10);
+    color: white;
 }
 
 .footer-list-song{
-    padding: 16px 32px;
+    padding: 0px 32px;
 }
 
 .footer-list-song-item{
     display: flex;
     align-items: center;
+    margin-bottom: 12px;
+    border-radius: 16px;
+}
+
+.footer-list-song-item.footer-list-song-item-active{
+    background-color: rgba(88, 82, 82, 0.7);
+}
+
+.footer-list-song-item:hover{
+    background-color: rgba(88, 82, 82, 0.7);
 }
 
 .footer-list-song-poster{
@@ -498,25 +526,46 @@
 
 .footer-list-song-title{
     margin-left: 16px;
-    width: 200px;
+    width: 150px;
 }
 
 .footer-list-song-icon{
     padding: 16px;
     font-size: 16px;
+    color: white;
 }
 
 .footer-list-song-title-time{
-    color: black;
+    color: white;
+    font-size: 12px;
 }
 
 .footer-list-song-title-name{
-    color: rgb(165, 162, 10);
-
-    font-size: 18px;
+    color: white;
+    font-size: 20px;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: scroll;
 }
 
 .footer-list-song-title-singer{
-    color: black;
+    color: white;
+    font-size: 12px;
 }
+
+.content-handle-main-rotato.active{
+    color: red;
+}
+
+.content-handle-main-pre.active{
+    color: red;
+}
+
+.content-handle-main-next.active{
+    color: red;
+}
+
+.content-handle-main-shuffle.active{
+    color: red;
+}
+

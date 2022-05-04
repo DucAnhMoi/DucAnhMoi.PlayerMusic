@@ -45,44 +45,28 @@ function Validator(dataValidator) {
                     }
                 })
             }
-            // Data Sign In
-            var DataSignInList = []
-            var DataSignInListO = {
-                userName: "a",
-                email: "a",
-                password: "a"
-            }
-            // Get data input user enter
-            for (i in formElement.querySelectorAll(".sign_form-message")) {
-                if (formElement.querySelectorAll(".sign_form-message")[i].outerText == "") {
-                    DataSignInList.push(formElement.querySelectorAll(".sign_form-message")[i].parentElement.querySelector(".input-box").querySelector("input").value)
-                }
-                else {
-                    break
+            var infoAc = []
+            listMessageE = formElement.querySelectorAll(".sign_form-message")
+            for (var i = 0; i < listMessageE.length; i++){
+                if ((listMessageE[i].outerText) == ""){
+                    infoAc[i] = listMessageE[i].parentElement.querySelector("input").value
                 }
             }
-            // return Data to server to compare
-            DataSignInListO.userName = DataSignInList[0]
-            DataSignInListO.password = DataSignInList[1]
-
-            // Data on server
-            var AccSignIn = [
-                {
-                    userName: "ducanh123",
-                    email: "tducanh123@gmail.com",
-                    password: "123456"
+            var iUser = localStorage.getItem("iUser")
+            var length = Number(iUser)
+            for (var j = 0; j < length; j++){
+                var DataUser = JSON.parse(localStorage.getItem(`DataUser${j+1}`)) 
+                if ((DataUser.username == infoAc[0]) && (DataUser.password == infoAc[1])){
+                    $(".sign_form").style.display = "none"
+                    $(".app").classList.remove("none")
+                    $(".content-audio").play()
+                    $(".content-audio").setAttribute("autoplay", true)
                 }
-            ]
-            // compare data server and input user enter
-            AccSignIn.forEach((AccSignInitem) => {
-                if ((AccSignInitem.userName == DataSignInListO.userName) && (AccSignInitem.password == DataSignInListO.password)) {
-                    document.querySelector(".sign_form").style.display = "none"
-                    console.log(1)
-                }
-            })
-        }
+            }
+        }    
         // onclick sign up
         submitBtn[1].onclick = function () {
+            var infoAc = []
             // check validate
             formElement = submitBtn[1].parentElement
             // get rule to validate
@@ -102,28 +86,38 @@ function Validator(dataValidator) {
                         })
                         validate(inputElement, rulesList)
                     }
+                    listMessageE = formElement.querySelectorAll(".sign_form-message")
+                    for (var i = 0; i < listMessageE.length; i++){
+                        if ((listMessageE[i].outerText) == ""){
+                            infoAc[i] = listMessageE[i].parentElement.querySelector("input").value
+                        }
+                        else{
+                            infoAc = []
+                            break
+                        }
+                    }
                 })
             }
-            // data Sign up
-            var DataSignUpList = []
-            var DataSignUpListO = {
-                userName: "a",
-                email: "a",
-                password: "a"
-            }
-            // Get data user enter
-            for (i in formElement.querySelectorAll(".sign_form-message")) {
-                if (formElement.querySelectorAll(".sign_form-message")[i].outerText == "") {
-                    DataSignUpList.push(formElement.querySelectorAll(".sign_form-message")[i].parentElement.querySelector(".input-box").querySelector("input").value)
+            if (infoAc.length !== 0){
+                var iUser = localStorage.getItem("iUser")
+                var length = Number(iUser)
+                for (var j = 0; j < length; j++){
+                    var DataUser = JSON.parse(localStorage.getItem(`DataUser${j+1}`)) 
+                    if ((DataUser.username == infoAc[0]) || (DataUser.email == infoAc[1])){
+                        formElement.querySelectorAll(".sign_form-message")[3].innerText = "Username Or Email Already Used"
+                        break
+                    }
                 }
-                else {
-                    break
+                if (formElement.querySelectorAll(".sign_form-message")[3].outerText == ""){
+                    iUser = Number(iUser) + 1
+                    localStorage.setItem(`DataUser${iUser}`, JSON.stringify({
+                        username: infoAc[0],
+                        email: infoAc[1],
+                        password: infoAc[2]
+                    }))
+                    localStorage.setItem("iUser", iUser)
                 }
             }
-            // get data to return
-            DataSignUpListO.userName = DataSignUpList[0]
-            DataSignUpListO.email = DataSignUpList[1]
-            DataSignUpListO.password = DataSignUpList[2]
         }
     }
     // get form 
